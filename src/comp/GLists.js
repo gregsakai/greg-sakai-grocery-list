@@ -5,11 +5,12 @@ class GLists extends Component {
   constructor(props){
     super(props);
 
-
   }
 
+
+
   removeItem(){
-    sliceGItem(index);
+
   }
 
 

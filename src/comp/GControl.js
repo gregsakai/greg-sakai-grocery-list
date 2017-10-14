@@ -13,6 +13,8 @@ class GControl extends Component {
 
   }
 
+
+
   addItem(){
     pushGItem(data);
   }
@@ -34,7 +36,9 @@ class GControl extends Component {
 
     return (
       <div className="Control">
-
+        <input type="text" placeholder="QTY" />
+        <input type="text" placeholder="Enter Item" />
+        <button onClick={this.addItem} >+</button>
       </div>
     );
   }

@@ -8,7 +8,8 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      glists:[]
+      glists:[],
+      display:true
     }
 
     this.pushGItem = this.pushGItem.bind(this);
@@ -16,7 +17,7 @@ class App extends Component {
   }
 
   pushGItem(data){
-    var arr = this.state.users;
+    var arr = this.state.glists;
     arr.push(data);
     this.setState({
       glists:arr
@@ -25,13 +26,17 @@ class App extends Component {
   }
 
   sliceGItem(index){
-    var arr = this.state.users;
+    var arr = this.state.glists;
     arr.slice(index);
     this.setState({
       glists:arr
     });
     console.log(arr);
   }
+
+
+
+
 
 
 
@@ -43,7 +48,8 @@ class App extends Component {
 
     return (
       <div className="App">
-
+        <GControl />
+        <GLists />
       </div>
     );
   }
