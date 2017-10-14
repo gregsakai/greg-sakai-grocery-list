@@ -8,16 +8,16 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      glists:[],
-      display:true
+      glists:[]
     }
 
     this.pushGItem = this.pushGItem.bind(this);
     this.sliceGItem = this.sliceGItem.bind(this);
   }
 
+  var arr = this.state.glists;
+
   pushGItem(data){
-    var arr = this.state.glists;
     arr.push(data);
     this.setState({
       glists:arr
@@ -26,13 +26,14 @@ class App extends Component {
   }
 
   sliceGItem(index){
-    var arr = this.state.glists;
     arr.slice(index);
     this.setState({
       glists:arr
     });
     console.log(arr);
   }
+
+
 
 
 

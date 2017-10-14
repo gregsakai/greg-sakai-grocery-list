@@ -7,20 +7,22 @@ class GControl extends Component {
   constructor(props){
     super(props);
     this.state = {
+      glists:[],
       num:0,
       itemName:""
     }
 
+    this.pushGItem = this.pushGItem.bind(this);
   }
 
 
 
   addItem(){
-    pushGItem(data);
+
   }
 
   changeNum(evt){
-
+    
   }
 
   changeItemName(evt){
@@ -36,9 +38,9 @@ class GControl extends Component {
 
     return (
       <div className="Control">
-        <input type="text" placeholder="QTY" />
-        <input type="text" placeholder="Enter Item" />
-        <button onClick={this.addItem} >+</button>
+        <input type="text" placeholder="QTY" onChange={this.changeNum} />
+        <input type="text" placeholder="Enter Item" onChange={this.pushGItem} />
+        <button onClick={this.pushGItem} >+</button>
       </div>
     );
   }
