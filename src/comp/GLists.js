@@ -9,11 +9,13 @@ class GLists extends Component {
       itemName:""
     }
 
+    this.removeItem = this.removeItem.bind(this);
+    this.sliceGItem = this.sliceGItem.bind(this);
   }
 
 
   removeItem(){
-
+    sliceGItem(index);
   }
 
   // create loop for glists indices, wrap values with div and button tags
@@ -26,7 +28,7 @@ class GLists extends Component {
 
     return (
       <div className="Lists">
-
+        <button onClick={this.sliceGItem} >Remove Item</button>
       </div>
     );
   }
