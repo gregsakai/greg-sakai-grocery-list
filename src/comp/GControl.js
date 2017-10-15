@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import App from "../App";
 
 class GControl extends Component {
 
@@ -10,14 +11,14 @@ class GControl extends Component {
     }
 
     this.addItem = this.addItem.bind(this);
-    this.pushGItem = this.pushGItem.bind(this);
     this.changeNum = this.changeNum.bind(this);
     this.changeItemName = this.changeItemName.bind(this);
   }
 
 
   addItem(){
-    pushGItem(data);
+    <App ref="pushGItem" />
+    //pushGItem();
   }
 
   changeNum(evt){

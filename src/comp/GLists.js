@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import App from "../App";
 
 class GLists extends Component {
 
@@ -15,7 +16,8 @@ class GLists extends Component {
 
 
   removeItem(){
-    sliceGItem(index);
+    <App ref="sliceGItem" />
+    //sliceGItem();
   }
 
   // create loop for glists indices, wrap values with div and button tags
@@ -28,7 +30,12 @@ class GLists extends Component {
 
     return (
       <div className="Lists">
-        <button onClick={this.sliceGItem} >Remove Item</button>
+
+        <div>
+
+          <button onClick={this.removeItem} >Remove Item</button>
+        </div>
+
       </div>
     );
   }
