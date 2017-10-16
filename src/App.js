@@ -38,10 +38,10 @@ class App extends Component {
 
   render() {
 
-    var mycomp = null;
-    if (this.state.display == true){
-      mycomp = <GControl pushGItem={this.pushGItem} />;
-    }
+    // var mycomp = null;
+    // if (this.state.display == true){
+    //   mycomp = <GControl pushGItem={this.pushGItem} />;
+    // }
 
     return (
       <div className="App">

@@ -11,13 +11,12 @@ class GLists extends Component {
     }
 
     this.removeItem = this.removeItem.bind(this);
-    this.sliceGItem = this.sliceGItem.bind(this);
   }
 
 
   removeItem(){
-    <App ref="sliceGItem" />
-    //sliceGItem();
+    <App ref={App.sliceGItem} />
+    console.log("Removed item");
   }
 
   // create loop for glists indices, wrap values with div and button tags
