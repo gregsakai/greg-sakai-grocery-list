@@ -10,12 +10,9 @@ class App extends Component {
     this.state = {
       glists:[]
     }
-
     this.pushGItem = this.pushGItem.bind(this);
     this.sliceGItem = this.sliceGItem.bind(this);
   }
-
-
 
   pushGItem(data){
     var arr = this.state.glists;
@@ -24,6 +21,7 @@ class App extends Component {
       glists:arr
     });
     console.log(arr);
+    console.log(this.state.glists);
   }
 
   sliceGItem(index){
@@ -35,13 +33,7 @@ class App extends Component {
     console.log(arr);
   }
 
-
   render() {
-
-    // var mycomp = null;
-    // if (this.state.display == true){
-    //   mycomp = <GControl pushGItem={this.pushGItem} />;
-    // }
 
     return (
       <div className="App">

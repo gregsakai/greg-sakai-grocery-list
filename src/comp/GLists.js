@@ -20,12 +20,17 @@ class GLists extends Component {
   }
 
   // create loop for glists indices, wrap values with div and button tags
+  // render: function() {
+  //   	var names = ['Jake', 'Jon', 'Thruster'];
+  //       var namesList = names.map(function(name, index){
+  //           			return <li key={ index }>{name}</li>;
+  //         			})
+  //
+  //       return  <ul>{ namesList }</ul>
+  //   }
+
 
   render() {
-
-
-
-
 
     return (
       <div className="Lists">

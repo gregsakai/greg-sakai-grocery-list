@@ -15,29 +15,23 @@ class GControl extends Component {
     this.changeItemName = this.changeItemName.bind(this);
   }
 
-
   addItem(){
     <App ref={App.pushGItem} />
-    //<App ref="pushGItem" />
-    //<App ref={(pushGItem) => { this._pushGItem = pushGItem; }} />
     console.log("Added item");
+    console.log(this.state.glists);
   }
 
   changeNum(evt){
-    var newNum = evt.target.value;
-
     this.setState({
-      num:newNum
+      num:evt.target.value
     });
     console.log("Changed quantity");
     console.log(evt.target.value);
   }
 
   changeItemName(evt){
-    var newItemName = evt.target.value;
-
     this.setState({
-      itemName:newItemName
+      itemName:evt.target.value
     });
     console.log("Changed item name");
     console.log(evt.target.value);
@@ -45,8 +39,6 @@ class GControl extends Component {
 
 
   render() {
-
-
 
     return (
       <div className="Control">
@@ -56,8 +48,6 @@ class GControl extends Component {
       </div>
     );
   }
-
-
 }
 
 export default GControl;
