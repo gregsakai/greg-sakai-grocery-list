@@ -21,24 +21,27 @@ class App extends Component {
       glists:arr
     });
     console.log(arr);
-    console.log(this.state.glists);
   }
 
   sliceGItem(index){
     var arr = this.state.glists;
-    arr.slice(index);
+    arr.splice(index, 1);
     this.setState({
       glists:arr
     });
-    console.log(arr);
   }
 
   render() {
 
     return (
       <div className="App">
-        <GControl />
-        <GLists />
+        <GControl
+          pushGItem={this.pushGItem}
+        />
+        <GLists
+          glists={this.state.glists}
+          sliceGItem={this.sliceGItem}
+        />
       </div>
     );
   }

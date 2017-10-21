@@ -14,32 +14,25 @@ class GLists extends Component {
   }
 
 
-  removeItem(){
-    <App ref={App.sliceGItem} />
-    console.log("Removed item");
+  removeItem(index){
+    this.props.sliceGItem(index);
   }
-
-  // create loop for glists indices, wrap values with div and button tags
-  // render: function() {
-  //   	var names = ['Jake', 'Jon', 'Thruster'];
-  //       var namesList = names.map(function(name, index){
-  //           			return <li key={ index }>{name}</li>;
-  //         			})
-  //
-  //       return  <ul>{ namesList }</ul>
-  //   }
-
 
   render() {
 
+    var allItems = this.props.glists.map((obj, index)=>{
+
+      return (
+        <div key={index}>
+          <span>{obj}</span>
+          <button onClick={this.removeItem.bind(this, index)}>Remove</button>
+        </div>
+      )
+    });
+
     return (
       <div className="Lists">
-
-        <div>
-
-          <button onClick={this.removeItem} >Remove Item</button>
-        </div>
-
+        {allItems}
       </div>
     );
   }

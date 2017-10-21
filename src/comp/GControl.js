@@ -16,25 +16,24 @@ class GControl extends Component {
   }
 
   addItem(){
-    <App ref={App.pushGItem} />
-    console.log("Added item");
-    console.log(this.state.glists);
+    var title = this.state.itemName;
+    this.props.pushGItem(title);
   }
 
   changeNum(evt){
+    var newNum = evt.target.value;
     this.setState({
-      num:evt.target.value
+      num:newNum
     });
-    console.log("Changed quantity");
-    console.log(evt.target.value);
+    console.log(newNum);
   }
 
   changeItemName(evt){
+    var title = evt.target.value;
     this.setState({
-      itemName:evt.target.value
+      itemName:title
     });
-    console.log("Changed item name");
-    console.log(evt.target.value);
+    console.log(title);
   }
 
 
