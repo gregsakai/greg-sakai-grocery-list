@@ -6,13 +6,11 @@ class GLists extends Component {
   constructor(props){
     super(props);
     this.state = {
-      num:0,
+      num:"",
       itemName:""
     }
-
     this.removeItem = this.removeItem.bind(this);
   }
-
 
   removeItem(index){
     this.props.sliceGItem(index);
@@ -21,10 +19,10 @@ class GLists extends Component {
   render() {
 
     var allItems = this.props.glists.map((obj, index)=>{
-
       return (
         <div key={index}>
-          <span>{obj}</span>
+          <span>{this.state.num} </span>
+          <span>{obj} </span>
           <button onClick={this.removeItem.bind(this, index)}>Remove</button>
         </div>
       )
@@ -36,8 +34,6 @@ class GLists extends Component {
       </div>
     );
   }
-
-
 }
 
 export default GLists;

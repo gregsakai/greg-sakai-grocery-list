@@ -9,7 +9,6 @@ class GControl extends Component {
       num:0,
       itemName:""
     }
-
     this.addItem = this.addItem.bind(this);
     this.changeNum = this.changeNum.bind(this);
     this.changeItemName = this.changeItemName.bind(this);
@@ -36,9 +35,7 @@ class GControl extends Component {
     console.log(title);
   }
 
-
   render() {
-
     return (
       <div className="Control">
         <input type="text" placeholder="QTY" onChange={this.changeNum} />
