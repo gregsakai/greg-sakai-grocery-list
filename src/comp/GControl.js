@@ -38,9 +38,9 @@ class GControl extends Component {
   render() {
     return (
       <div className="Control">
-        <input type="text" placeholder="QTY" onChange={this.changeNum} />
-        <input type="text" placeholder="Enter Item" onChange={this.changeItemName} />
-        <button onClick={this.addItem} >+</button>
+        <input type="text" className="Inputs" placeholder="QTY" onChange={this.changeNum} />
+        <input type="text" className="Inputs" placeholder="Enter Item" onChange={this.changeItemName} />
+        <button onClick={this.addItem} className="AddButton">+</button>
       </div>
     );
   }

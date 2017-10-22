@@ -22,7 +22,7 @@ class GLists extends Component {
       return (
         <div key={index}>
           <span>{this.state.num} </span>
-          <span>{obj} </span>
+          <span className="GroceryItem">{obj} </span>
           <button onClick={this.removeItem.bind(this, index)}>Remove</button>
         </div>
       )
