@@ -15,8 +15,8 @@ class GControl extends Component {
   }
 
   addItem(){
-    var title = this.state.itemName;
-    this.props.pushGItem(title);
+    var newNum = this.state.num.toString();
+    this.props.pushGItem(newNum + " - " + this.state.itemName);
   }
 
   changeNum(evt){
@@ -40,7 +40,7 @@ class GControl extends Component {
       <div className="Control">
         <input type="text" className="Inputs" placeholder="QTY" onChange={this.changeNum} />
         <input type="text" className="Inputs" placeholder="Enter Item" onChange={this.changeItemName} />
-        <button onClick={this.addItem} className="AddButton">+</button>
+        <button onClick={this.addItem} className="AddButton">Add Item</button>
       </div>
     );
   }

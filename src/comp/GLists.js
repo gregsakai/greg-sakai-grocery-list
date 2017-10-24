@@ -5,10 +5,7 @@ class GLists extends Component {
 
   constructor(props){
     super(props);
-    this.state = {
-      num:"",
-      itemName:""
-    }
+
     this.removeItem = this.removeItem.bind(this);
   }
 
@@ -21,9 +18,8 @@ class GLists extends Component {
     var allItems = this.props.glists.map((obj, index)=>{
       return (
         <div key={index}>
-          <span>{this.state.num} </span>
-          <span className="GroceryItem">{obj} </span>
-          <button onClick={this.removeItem.bind(this, index)}>Remove</button>
+          <span className="GroceryItem">{obj}</span>
+          <button onClick={this.removeItem.bind(this, index)} className="RemoveButtons">Remove</button>
         </div>
       )
     });
